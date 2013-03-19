@@ -1,0 +1,9 @@
+[user]
+	name = Paul Baltescu
+	email = pauldb89@gmail.com
+[color]
+	ui = true
+[alias]
+	co = checkout
+	st = status
+	b = branch
