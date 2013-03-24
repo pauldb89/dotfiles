@@ -25,7 +25,7 @@ set formatoptions=cqt
 au InsertEnter * :set nohlsearch  "Disable search when entering insert mode
 au InsertLeave * :set hlsearch    "Reenable it back
 
-":set makeprg=make\ %<\ LDLIBS=\"-lm\ -fopenmp\ -lboost_program_options\"\ CFLAGS=\"-Wall\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"\ CPPFLAGS=\"-Wall\ -std=c++0x\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"
+:set makeprg=make\ %<\ LDLIBS=\"-lm\ -fopenmp\ -lboost_program_options\"\ CFLAGS=\"-Wall\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"\ CPPFLAGS=\"-Wall\ -std=c++0x\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"
 
 imap <F2> <ESC>:w<CR>a
 imap <F3> <ESC>:tabnew<CR>:e 
@@ -38,8 +38,8 @@ map <F2> <ESC>:w<CR>
 map <F3> <ESC>:tabnew<CR>:e 
 map <F5> <ESC>:tabprev<CR>
 map <F6> <ESC>:tabnext<CR>
-map <F7> <ESC>:make check<CR>
-map <F8> <ESC>:w<CR>:make run_extractor<CR>
+map <F7> <ESC>:make<CR>
+map <F8> <ESC>:w<CR>:make<CR>
 map <F9> <ESC>:w<CR>:make<CR>:!time ./%<<CR>
 map < <ESC>:cprev<CR>
 map > <ESC>:cnext<CR>
