@@ -13,6 +13,8 @@ alias build-extractor='cd ~/workspace/cdec/python && python setup.py install --u
 alias recompile-extractor='recompile-cython && build-extractor'
 alias ssh-tiger='ssh paulb@tiger.cs.ox.ac.uk'
 alias mysql-ia='mysql -u root -h localhost -D infoarena2 -p'
+alias ssh-ia='ssh infoarena@direct.infoarena.ro -p 21883 -AC'
+alias ssh-eval='ssh eval@iaeval.dyndns.org -AC'
 
 # Environment variables
 
