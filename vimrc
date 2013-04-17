@@ -11,7 +11,8 @@ set smartcase                     " Upper case letter in search pattern => case 
 set showmatch                     " Cursor jumps to matching paranthesis when in insert mode
 set bg=dark                       " Enable magical colors
 set nowrap                        " Don't wrap long lines
-set textwidth=80                  " 80 chars per line
+autocmd filetype * set textwidth=80                  " 80 chars per line
+autocmd filetype sql set textwidth=200
 set gdefault                      " Replace all matches in a line by default
 set selectmode=mouse              " Select code using the mouse
 set number                        " Enable line numbering
@@ -77,3 +78,6 @@ inoremap <Leader>8 <ESC>8gt<CR>
 
 " Search for tags file up the directory structure
 set tags=tags;/
+
+" Jump to function/variable/class definition.
+nnoremap <C-b> <C-]>
