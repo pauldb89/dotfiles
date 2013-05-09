@@ -11,13 +11,16 @@ set smartcase                     " Upper case letter in search pattern => case 
 set showmatch                     " Cursor jumps to matching paranthesis when in insert mode
 set bg=dark                       " Enable magical colors
 set nowrap                        " Don't wrap long lines
-autocmd filetype * set textwidth=80                  " 80 chars per line
-autocmd filetype sql set textwidth=200
 set gdefault                      " Replace all matches in a line by default
 set selectmode=mouse              " Select code using the mouse
 set number                        " Enable line numbering
+set textwidth=80                  " 80 chars per line (with a few exceptions)
+autocmd bufnew *.sql,*.php setlocal textwidth=0
+autocmd bufread *.sql,*.php setlocal textwidth=0
 
 set expandtab
+autocmd bufnew *.php,*md setlocal noexpandtab
+autocmd bufread *.php,*md setlocal noexpandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
