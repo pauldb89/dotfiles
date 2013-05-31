@@ -45,15 +45,19 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/workspace/tools
 
 # User specific aliases and functions
-alias ws='cd ~/workspace'
-alias recompile-cython='cython ~/workspace/cdec/python/src/sa/_sa.pyx'
-alias build-extractor='cd ~/workspace/cdec/python && python setup.py install --user && cd -'
-alias recompile-extractor='recompile-cython && build-extractor'
-alias tiger='paulb@tiger.cs.ox.ac.uk'
-alias mysql-ia='mysql -u root -h localhost -D infoarena2 -p'
-alias ia-server='infoarena@direct.infoarena.ro -p 21883 -AC'
-alias ia-eval='eval@iaeval.dyndns.org -AC'
-alias mysql-backup='mysql -u root -h localhost -p -D ia_backup'
+alias ws="cd ~/workspace"
+alias print-file="lpr -Pmono4dhup"
+
+alias recompile-cython="cython ~/workspace/cdec/python/src/sa/_sa.pyx"
+alias build-extractor="cd ~/workspace/cdec/python && python setup.py install --user && cd -"
+alias recompile-extractor="recompile-cython && build-extractor"
+
+alias tiger="paulb@tiger.cs.ox.ac.uk"
+alias ia-server="infoarena@direct.infoarena.ro -p 21883 -AC"
+alias ia-eval="eval@iaeval.dyndns.org -AC"
+
+alias mysql-backup="mysql -u root -h localhost -p -D ia_backup"
+alias mysql-ia="mysql -u root -h localhost -D infoarena2 -p"
 
 # Environment variables
 export EDITOR="vim"
