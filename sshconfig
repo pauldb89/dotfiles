@@ -1,0 +1,16 @@
+Host tiger
+  User paulb
+  HostName tiger.cs.ox.ac.uk
+
+Host ia-server
+  User infoarena
+  HostName direct.infoarena.ro
+  Port 21883
+  ForwardAgent yes
+  Compression yes
+
+Host ia-eval
+  User eval
+  HostName iaeval.dyndns.org
+  ForwardAgent yes
+  Compression yes

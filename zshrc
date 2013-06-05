@@ -52,10 +52,6 @@ alias recompile-cython="cython ~/workspace/cdec/python/src/sa/_sa.pyx"
 alias build-extractor="cd ~/workspace/cdec/python && python setup.py install --user && cd -"
 alias recompile-extractor="recompile-cython && build-extractor"
 
-alias tiger="paulb@tiger.cs.ox.ac.uk"
-alias ia-server="infoarena@direct.infoarena.ro -p 21883 -AC"
-alias ia-eval="eval@iaeval.dyndns.org -AC"
-
 alias mysql-backup="mysql -u root -h localhost -p -D ia_backup"
 alias mysql-ia="mysql -u root -h localhost -D infoarena2 -p"
 
