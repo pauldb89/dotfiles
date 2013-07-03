@@ -17,8 +17,6 @@ set number                        " Enable line numbering
 set textwidth=80                  " 80 chars per line (with a few exceptions)
 
 set expandtab
-autocmd bufnew *.php,*md setlocal noexpandtab
-autocmd bufread *.php,*md setlocal noexpandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
