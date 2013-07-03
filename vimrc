@@ -15,8 +15,6 @@ set gdefault                      " Replace all matches in a line by default
 set selectmode=mouse              " Select code using the mouse
 set number                        " Enable line numbering
 set textwidth=80                  " 80 chars per line (with a few exceptions)
-autocmd bufnew *.sql,*.php setlocal textwidth=0
-autocmd bufread *.sql,*.php setlocal textwidth=0
 
 set expandtab
 autocmd bufnew *.php,*md setlocal noexpandtab
