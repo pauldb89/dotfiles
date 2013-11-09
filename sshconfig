@@ -14,3 +14,8 @@ Host ia-eval
   HostName iaeval.dyndns.org
   ForwardAgent yes
   Compression yes
+
+Host *
+  Protocol 2
+  TCPKeepAlive yes
+  ServerAliveInterval 60
