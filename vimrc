@@ -15,6 +15,18 @@ set gdefault                      " Replace all matches in a line by default
 set selectmode=mouse              " Select code using the mouse
 set number                        " Enable line numbering
 set textwidth=80                  " 80 chars per line (with a few exceptions)
+set splitright                    " Use vertical splits by default
+
+set tags=$HOME/workspace/tags     " Set location for ctags index.
+" au BufWritePost *.py,*.c,*.cpp,*.h silent! !eval 'ctags -R -o newtags; mv newtags tags' &
+
+map <F1> :TlistToggle<CR>
+
+" Needed for using Command-T in screen
+set term=xterm
+
+" Open Command-T
+map <F3> :CommandT<CR>
 
 set expandtab
 set tabstop=2
@@ -29,19 +41,18 @@ au InsertLeave * :set hlsearch    " Reenable it back
 :set makeprg=make\ %<\ LDLIBS=\"-lm\"\ CFLAGS=\"-Wall\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"\ CPPFLAGS=\"-Wall\ -std=c++0x\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"
 
 imap <F2> <ESC>:w<CR>a
-imap <F3> <ESC>:tabnew<CR>:e 
-imap <F5> <ESC>:tabprev<CR>
-imap <F6> <ESC>:tabnext<CR>a
+imap <F5> <ESC><C-W>h
+imap <F6> <ESC><C-W>l
 imap <F7> <ESC>:make check<CR>
 imap <F8> <ESC>:w<CR>:make<CR>
 imap <F9> <ESC>:w<CR>:make<CR>:!time ./%<<CR>
 map <F2> <ESC>:w<CR>
-map <F3> <ESC>:tabnew<CR>:e 
-map <F5> <ESC>:tabprev<CR>
-map <F6> <ESC>:tabnext<CR>
+map <F5> <ESC><C-W>h
+map <F6> <ESC><C-W>l
 map <F7> <ESC>:make<CR>
 map <F8> <ESC>:w<CR>:make<CR>
 map <F9> <ESC>:w<CR>:make<CR>:!time ./%<<CR>
+
 map <F4> <ESC>:q!<CR>
 
 syntax enable
@@ -56,27 +67,6 @@ autocmd BufWinLeave * call clearmatches()
 
 " Set , as the leader key instead of \
 let mapleader = ","
-
-" Use ,1 to go to the first tab, etc.
-nnoremap <Leader>1 <ESC>1gt<CR>
-nnoremap <Leader>2 <ESC>2gt<CR>
-nnoremap <Leader>3 <ESC>3gt<CR>
-nnoremap <Leader>4 <ESC>4gt<CR>
-nnoremap <Leader>5 <ESC>5gt<CR>
-nnoremap <Leader>6 <ESC>6gt<CR>
-nnoremap <Leader>7 <ESC>7gt<CR>
-nnoremap <Leader>8 <ESC>8gt<CR>
-inoremap <Leader>1 <ESC>1gt<CR>
-inoremap <Leader>2 <ESC>2gt<CR>
-inoremap <Leader>3 <ESC>3gt<CR>
-inoremap <Leader>4 <ESC>4gt<CR>
-inoremap <Leader>5 <ESC>5gt<CR>
-inoremap <Leader>6 <ESC>6gt<CR>
-inoremap <Leader>7 <ESC>7gt<CR>
-inoremap <Leader>8 <ESC>8gt<CR>
-
-" Search for tags file up the directory structure
-set tags=tags;/
 
 " Jump to function/variable/class definition.
 nnoremap <C-b> <C-]>
