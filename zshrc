@@ -42,10 +42,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/workspace/tools
-
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/workspace/tools:$HOME/workspace/worm
 # User specific aliases and functions
 alias ws="cd ~/workspace"
+alias clean="cd ~/data/wmt09/en-de/clean/"
 alias print-file="lpr -Pmono4dhup"
 
 alias recompile-cython="cython ~/workspace/cdec/python/src/sa/_sa.pyx"
@@ -55,5 +55,10 @@ alias recompile-extractor="recompile-cython && build-extractor"
 alias mysql-backup="mysql -u root -h localhost -p -D ia_backup"
 alias mysql-ia="mysql -u root -h localhost -D infoarena2 -p"
 
+alias py="ipython --pylab"
+alias make="make -j8"
+
 # Environment variables
 export EDITOR="vim"
+export CDEC=$HOME/workspace/cdec
+export EIGEN3=$HOME/mylibs/eigen-3.2.0

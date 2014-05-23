@@ -17,7 +17,7 @@ set number                        " Enable line numbering
 set textwidth=80                  " 80 chars per line (with a few exceptions)
 set splitright                    " Use vertical splits by default
 
-set tags=$HOME/workspace/tags     " Set location for ctags index.
+set tags=./tags,tags;$HOME        " Look for ctags index in the directory of the current file, in the current directory and up until $HOME
 " au BufWritePost *.py,*.c,*.cpp,*.h silent! !eval 'ctags -R -o newtags; mv newtags tags' &
 
 map <F1> :TlistToggle<CR>
@@ -38,7 +38,7 @@ au InsertEnter * :set nohlsearch  " Disable search when entering insert mode
 au InsertLeave * :set hlsearch    " Reenable it back
 
 " Make command for programming contests
-:set makeprg=make\ %<\ LDLIBS=\"-lm\"\ CFLAGS=\"-Wall\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"\ CPPFLAGS=\"-Wall\ -std=c++0x\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"
+":set makeprg=make\ %<\ LDLIBS=\"-lm\"\ CFLAGS=\"-Wall\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"\ CPPFLAGS=\"-Wall\ -std=c++0x\ -Wno-unused-result\ -fno-strict-aliasing\ -O2\ -static\"
 
 imap <F2> <ESC>:w<CR>a
 imap <F5> <ESC><C-W>h
