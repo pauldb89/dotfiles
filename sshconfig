@@ -2,6 +2,10 @@ Host tiger
   User paulb
   HostName tiger.cs.ox.ac.uk
 
+Host taipan
+  User paulb
+  Hostname taipan.cs.ox.ac.uk
+
 Host ia-server
   User infoarena
   HostName direct.infoarena.ro
@@ -15,7 +19,14 @@ Host ia-eval
   ForwardAgent yes
   Compression yes
 
+Host ecs
+  User paulb
+  HostName ecs.ox.ac.uk
+  ForwardAgent yes
+  Compression yes
+
 Host *
   Protocol 2
   TCPKeepAlive yes
   ServerAliveInterval 60
+  ForwardX11 yes

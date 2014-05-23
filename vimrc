@@ -17,7 +17,9 @@ set number                        " Enable line numbering
 set textwidth=80                  " 80 chars per line (with a few exceptions)
 set splitright                    " Use vertical splits by default
 
-set tags=./tags,tags;$HOME        " Look for ctags index in the directory of the current file, in the current directory and up until $HOME
+set tags=./tags,tags;$HOME        " Look for ctags index in the directory of the
+                                  " current file, in the current directory and
+                                  " up until $HOME
 " au BufWritePost *.py,*.c,*.cpp,*.h silent! !eval 'ctags -R -o newtags; mv newtags tags' &
 
 map <F1> :TlistToggle<CR>
