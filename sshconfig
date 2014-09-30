@@ -6,6 +6,14 @@ Host taipan
   User paulb
   Hostname taipan.cs.ox.ac.uk
 
+Host brown
+  User paulb
+  Hostname brown.cs.ox.ac.uk
+
+Host mulga
+  User paulb
+  Hostname mulga.cs.ox.ac.uk
+
 Host ia-server
   User infoarena
   HostName direct.infoarena.ro

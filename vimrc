@@ -14,7 +14,6 @@ set nowrap                        " Don't wrap long lines
 set gdefault                      " Replace all matches in a line by default
 set selectmode=mouse              " Select code using the mouse
 set number                        " Enable line numbering
-set textwidth=80                  " 80 chars per line (with a few exceptions)
 set splitright                    " Use vertical splits by default
 
 set tags=./tags,tags;$HOME        " Look for ctags index in the directory of the
@@ -72,3 +71,7 @@ let mapleader = ","
 
 " Jump to function/variable/class definition.
 nnoremap <C-b> <C-]>
+
+" Disable "Entering Ex mode"
+map Q <Nop>
+map gs <Nop>

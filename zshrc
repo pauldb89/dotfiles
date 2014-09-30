@@ -42,7 +42,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/workspace/tools:$HOME/scripts
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/workspace/tools:$HOME/scripts:/usr/local/texlive/2014/bin/x86_64-linux
 
 # User specific aliases and functions
 alias ws="cd ~/workspace"
@@ -56,19 +56,16 @@ alias mysql-backup="mysql -u root -h localhost -p -D ia_backup"
 alias mysql-ia="mysql -u root -h localhost -D infoarena2 -p"
 
 alias py="ipython --pylab"
-alias make="make -j8"
+alias make="make -j4"
 alias sum="awk '{ sum += \$1 } END { print sum }'"
 
 # Environment variables
 export EDITOR="vim"
+export TERM=xterm
+
 export CDEC=$HOME/workspace/cdec
 export EIGEN3=$HOME/mylibs/eigen-3.2.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PYTHONPATH=$PYTHONPATH:$HOME/workspace/jodohin
-
-# Environment variables
-export EDITOR="vim"
-export EIGEN3=$HOME/mylibs/eigen-3.2.0
-export CDEC=$HOME/workspace/cdec
