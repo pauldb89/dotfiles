@@ -56,7 +56,7 @@ alias mysql-backup="mysql -u root -h localhost -p -D ia_backup"
 alias mysql-ia="mysql -u root -h localhost -D infoarena2 -p"
 
 alias py="ipython --pylab"
-alias make="make -j4"
+alias make="make -j8"
 alias sum="awk '{ sum += \$1 } END { print sum }'"
 
 # Environment variables
@@ -64,7 +64,6 @@ export EDITOR="vim"
 export TERM=xterm
 
 export CDEC=$HOME/workspace/cdec
-export EIGEN3=$HOME/mylibs/eigen-3.2.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
