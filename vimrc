@@ -19,21 +19,24 @@ set splitright                    " Use vertical splits by default
 set tags=./tags,tags;$HOME        " Look for ctags index in the directory of the
                                   " current file, in the current directory and
                                   " up until $HOME
-" au BufWritePost *.py,*.c,*.cpp,*.h silent! !eval 'ctags -R -o newtags; mv newtags tags' &
-
-map <F1> :TlistToggle<CR>
-
-" Needed for using Command-T in screen
-set term=xterm
-
-" Open Command-T
-map <F3> :CommandT<CR>
-
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set formatoptions=cqt
+
+map <F1> :TlistToggle<CR>
+
+" Open Command-T
+map <F3> :CommandT<CR>
+
+" Needed for using Command-T in screen
+set term=xterm
+
+" Set Command-T to only look for files under the current directory (instead of
+" searching for the project root). I might want to revisit this setting some
+" time.
+let g:CommandTTraverseSCM = "pwd"
 
 au InsertEnter * :set nohlsearch  " Disable search when entering insert mode
 au InsertLeave * :set hlsearch    " Reenable it back
