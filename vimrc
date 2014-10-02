@@ -15,6 +15,7 @@ set gdefault                      " Replace all matches in a line by default
 set selectmode=mouse              " Select code using the mouse
 set number                        " Enable line numbering
 set splitright                    " Use vertical splits by default
+set textwidth=80                  " Set maximum line length to 80 characters.
 
 set tags=./tags,tags;$HOME        " Look for ctags index in the directory of the
                                   " current file, in the current directory and
