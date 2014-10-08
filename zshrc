@@ -46,7 +46,7 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 # User specific aliases and functions
 alias ws="cd ~/workspace"
-alias print-file="lpr -Pmono4dhup"
+alias print-file="lpr -Pmfp4dup"
 
 alias recompile-cython="cython ~/workspace/cdec/python/cdec/sa/_sa.pyx"
 alias build-extractor="cd ~/workspace/cdec/python && python setup.py install --user && cd -"
