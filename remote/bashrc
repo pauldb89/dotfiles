@@ -1,0 +1,2 @@
+alias mlbuild="docker build -t ml myfs/code/ml"
+alias mldoc="docker run --gpus all --shm-size 64G -i -v /home/ubuntu/myfs/datasets:/datasets -v /home/ubuntu/myfs/code/ml:/ml -v /home/ubuntu/myfs/.cache:/root/.cache -w /ml -t ml"
