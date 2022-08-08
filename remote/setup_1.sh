@@ -1,2 +1,3 @@
 sudo usermod -a -G docker ubuntu
-cat bashrc >> ~/.bashrc
+cat ~/myfs/code/dotfiles/remote/bashrc >> ~/.bashrc
+cp ~/myfs/code/dotfiles/remote/gitconfig ~/.gitconfig
