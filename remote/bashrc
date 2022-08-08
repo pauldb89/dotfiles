@@ -1,5 +1,5 @@
 alias mlbuild="docker build -t registry.gitlab.com/mldocker/ml myfs/code/ml"
 alias mlpush="docker push registry.gitlab.com/mldocker/ml"
 alias mlpull="docker pull registry.gitlab.com/mldocker/ml"
-alias mldoc="docker run --gpus all --shm-size 64G -i -v /home/ubuntu/myfs/datasets:/datasets -v /home/ubuntu/myfs/code/ml:/ml -v /home/ubuntu/myfs/.cache:/root/.cache -w /ml -t ml"
-alias mldoc_local="docker run --gpus all --shm-size 64G -i -v /home/ubuntu/datasets:/datasets -v /home/ubuntu/myfs/code/ml:/ml -v /home/ubuntu/myfs/.cache:/root/.cache -w /ml -t ml"
+alias mldoc="docker run --gpus all --shm-size 64G -i -v /home/ubuntu/myfs/datasets:/datasets -v /home/ubuntu/myfs/code/ml:/ml -v /home/ubuntu/myfs/.cache:/root/.cache -w /ml -t registry.gitlab.com/mldocker/ml"
+alias mldoc_local="docker run --gpus all --shm-size 64G -i -v /home/ubuntu/datasets:/datasets -v /home/ubuntu/myfs/code/ml:/ml -v /home/ubuntu/myfs/.cache:/root/.cache -w /ml -t registry.gitlab.com/mldocker/ml"
