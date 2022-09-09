@@ -3,3 +3,7 @@ docker login registry.gitlab.com
 
 echo "Pulling docker image..."
 time docker pull registry.gitlab.com/mldocker/ml
+
+echo "Setting up wandb"
+pip install wandb
+wandb login
