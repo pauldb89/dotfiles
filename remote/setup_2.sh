@@ -1,3 +1,5 @@
+pip install pip==22.3
+
 echo "Logging into Gitlab..."
 docker login registry.gitlab.com
 
